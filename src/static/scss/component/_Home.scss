@@ -1,3 +1,39 @@
 .nombre{
     font-size: 30px;
 }
+.img{
+ 
+    width: 100%;
+}
+.h1{
+    align-content: center;
+    font-family: var(--body-font);
+    font-size: 40px;
+    color: var(--color-main-dark);
+    position: absolute;
+    top: 150px;
+    left: 40px;
+}
+.tex{
+    font-family: var(--body-font);
+    font-size: 30px;
+    color: var(--color-main-dark);
+    position: absolute;
+    top: 220px;
+    left: 40px;
+}
+.checkList{
+    position:absolute;
+    top: 300px;
+    left: 40px;
+}
+.ck{
+    font-family: var(--body-font);
+    font-size: 20px;
+    color: var(--color-main-dark);
+    margin-top: 25px;
+}
+.item{
+    display: flex;
+    margin-bottom: 20px;
+}
