@@ -1,7 +1,6 @@
 import React, { useState, useReducer } from 'react'
 import { Redirect } from '@reach/router'
 import { useDispatch } from 'react-redux'
-import axios from 'axios'
 
 // Import actions types
 import { USERDATA } from '../../store/actionTypes'
@@ -26,6 +25,15 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
+    fetch(`http://127.0.0.1:3333/auth/login`, {
+      method: 'POST',
+      body: JSON.stringify({ email: userInput.email, password: userInput.password })
+    })
+      .then(response => {
+        console.log(response)
+      })
+    console.log({ email: userInput, password: userInput.password })
+    return <Redirect to='dashboard' />
   }
 
   return (
