@@ -1,4 +1,5 @@
 import React, { useState, useReducer } from 'react'
+import { Redirect } from '@reach/router'
 
 // Import components
 import IconButton from '../Button/IconButton'
@@ -7,6 +8,7 @@ import Loader from '../Loader/Loader'
 const SignIn = props => {
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
   const [isLoading, setIsLoading] = useState(false)
+  const [data, setData] = useState(null)
 
   const handleOnChange = event => {
     setUserInput({ [event.target.name]: event.target.value })
@@ -15,11 +17,15 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
+    setData('hola')
+    // const respone = await fetch()
+    // const result = await respone.json()
 
-    const respone = await fetch()
-    const result = await respone.json()
+    // console.log(result)
+  }
 
-    console.log(result)
+  if (data !== null) {
+    return <Redirect to='/dashboard' />
   }
 
   return (
