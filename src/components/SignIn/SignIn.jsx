@@ -1,5 +1,9 @@
 import React, { useState, useReducer } from 'react'
 import { Redirect } from '@reach/router'
+import { useDispatch } from 'react-redux'
+
+// Import actions types
+import { USERDATA } from '../../store/actionTypes'
 
 // Import utils
 import { apiUrl } from '../../utils/api'
@@ -9,6 +13,7 @@ import IconButton from '../Button/IconButton'
 import Loader from '../Loader/Loader'
 
 const SignIn = props => {
+  const dispatch = useDispatch()
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
   const [isLoading, setIsLoading] = useState(false)
   const [data, setData] = useState(null)
@@ -20,17 +25,21 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
-    const respone = await fetch(`${apiUrl}/auth/login`, {
-      method: 'POST',
-      body: JSON.stringify({ email: userInput.email, password: userInput.password })
-    })
-    const result = await respone.json()
 
-    console.log(result)
-  }
+    JSON.stringify({ email: userInput.email, password: userInput.password })
+    // const respone = await fetch(`${apiUrl}/auth/login`, config)
+    // const result = await respone.json()
+    // console.log(result)
+    // setIsLoading(false)
+    // setData(result)
+    // dispatch({
+    //   type: USERDATA,
+    //   payload: {
 
-  if (data !== null) {
-    return <Redirect to='/dashboard' />
+    //   }
+    // })
+    // localStorage.setItem('easy-token', result)
+    // props.history.push('/dashboard')
   }
 
   return (
