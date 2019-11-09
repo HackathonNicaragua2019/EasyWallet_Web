@@ -27,8 +27,17 @@ const SignIn = props => {
     setIsLoading(true)
     event.preventDefault()
 
-    const response = await axios.post(`${apiUrl}/auth/login`, { email: userInput.email, password: userInput.password })
-    console.log(await response)
+    // const config = {
+    //   headers: {
+    //     'Access-Control-Allow-Origin': '*',
+    //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+    //   }
+    // }
+
+    // axios.post(`${apiUrl}/auth/login`, { email: userInput.email, password: userInput.password }, config)
+    //   .then(response => {
+    //     console.log(response)
+    //   })
     
     // console.log(result)
     // setIsLoading(false)
