@@ -1,0 +1,17 @@
+.item {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-image {
+    height: 60px;
+    width: 80px;
+  }
+
+  &-title {
+    color: var(--color-paragraph);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
