@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from 'react'
 import { Redirect } from '@reach/router'
 import { useDispatch } from 'react-redux'
+import axios from 'axios'
 
 // Import actions types
 import { USERDATA } from '../../store/actionTypes'
@@ -26,9 +27,9 @@ const SignIn = props => {
     setIsLoading(true)
     event.preventDefault()
 
-    JSON.stringify({ email: userInput.email, password: userInput.password })
-    // const respone = await fetch(`${apiUrl}/auth/login`, config)
-    // const result = await respone.json()
+    const response = await axios.post(`${apiUrl}/auth/login`, { email: userInput.email, password: userInput.password })
+    console.log(await response)
+    
     // console.log(result)
     // setIsLoading(false)
     // setData(result)
