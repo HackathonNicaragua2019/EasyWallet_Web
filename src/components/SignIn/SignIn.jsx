@@ -1,5 +1,8 @@
 import React, { useState, useReducer } from 'react'
 
+// Import components
+import IconButton from '../Button/IconButton'
+
 const SignIn = props => {
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
   const [isLoading, setIsLoading] = useState(false)
@@ -17,11 +20,15 @@ const SignIn = props => {
     <div className='signin-container'>
       <div className='signin-header'>
         <h2 className='signin-title'>SIGN IN</h2>
-        <p className='signin-description'>Hola, inicie sesion</p>
+        <p className='signin-description'>Hola, inicie sesion y comience a administrar su inventario</p>
       </div>
       <div className='signin-body'>
-        <div>
-          <form onSubmit={handleOnSubmit}>
+        <form
+          onSubmit={handleOnSubmit}
+          autoComplete='off'
+          className='signin-form'
+        >
+          <div className='signin-control'>
             <input
               type='email'
               className='signin-input'
@@ -30,7 +37,9 @@ const SignIn = props => {
               placeholder='Correo'
               name='email'
             />
+          </div>
 
+          <div className='signin-control'>
             <input
               type='password'
               className='signin-input'
@@ -39,14 +48,15 @@ const SignIn = props => {
               placeholder='Contraseña'
               name='password'
             />
+          </div>
 
-            <input
-              type='submit'
-              value='ENVIAR'
-              className='signin-button'
+          <div className='signin-button'>
+            <IconButton
+              message='ENVIAR'
             />
-          </form>
-        </div>
+
+          </div>
+        </form>
       </div>
     </div>
   )

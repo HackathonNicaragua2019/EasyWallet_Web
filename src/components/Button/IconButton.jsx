@@ -3,9 +3,12 @@ import React from 'react'
 
 const IconButton = props => {
   return (
-    <div className='button-container'>
-      {props.children}
-      <p>{props.message}</p>
+    <div className='button'>
+      <input
+        value={props.message}
+        className='button-input'
+        type='submit'
+      />
     </div>
   )
 }

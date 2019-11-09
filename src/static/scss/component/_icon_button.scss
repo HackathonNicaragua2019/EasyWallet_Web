@@ -1,6 +1,20 @@
 .button {
-  &-container {
-
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+  &-input {
+    width: 170px;
+    background: var(--color-secondary);
+    border-radius: 200px;
+    color: var(--color-paragraph);
+    text-align: center;
+    border: 0;
+    outline: 0;
+    padding: 10px 25px;
+    cursor: pointer;
+    &:hover {
+      background: var(--color-main-dark);
+    }
   }
-  &-
 }
