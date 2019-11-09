@@ -1,9 +1,13 @@
 import React from 'react'
 
+import NavBar from '../../components/NavBar/NavBar'
+
+
 const HomePage = () => {
   return (
     <div>
-      <p>EasyWallet</p>
+      <NavBar/>
+  
     </div>
   )
 }
