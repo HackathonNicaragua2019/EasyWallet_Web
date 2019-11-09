@@ -7,7 +7,7 @@ const Item = () => {
   return (
     <div className='item'>
       <img
-        className='img-image'
+        className='item-image'
         alt='EasyWallet'
         src={logo}
       />
