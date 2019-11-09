@@ -1,6 +1,9 @@
 import React, { useState, useReducer } from 'react'
 import { Redirect } from '@reach/router'
 
+// Import utils
+import { apiUrl } from '../../utils/api'
+
 // Import components
 import IconButton from '../Button/IconButton'
 import Loader from '../Loader/Loader'
@@ -17,11 +20,13 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
-    setData('hola')
-    // const respone = await fetch()
-    // const result = await respone.json()
+    const respone = await fetch(`${apiUrl}/auth/login`, {
+      method: 'POST',
+      body: JSON.stringify({ email: userInput.email, password: userInput.password })
+    })
+    const result = await respone.json()
 
-    // console.log(result)
+    console.log(result)
   }
 
   if (data !== null) {
