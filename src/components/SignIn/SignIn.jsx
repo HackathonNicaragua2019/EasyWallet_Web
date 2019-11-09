@@ -2,6 +2,7 @@ import React, { useState, useReducer } from 'react'
 
 // Import components
 import IconButton from '../Button/IconButton'
+import Loader from '../Loader/Loader'
 
 const SignIn = props => {
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
@@ -14,6 +15,11 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
+
+    const respone = await fetch()
+    const result = await respone.json()
+
+    console.log(result)
   }
 
   return (
@@ -51,10 +57,18 @@ const SignIn = props => {
           </div>
 
           <div className='signin-button'>
-            <IconButton
-              message='ENVIAR'
-            />
+            {!isLoading && (
+              <IconButton
+                message='ENVIAR'
+              />
+            )}
 
+            {isLoading && (
+              <Loader
+                type='ThreeDots'
+                color='#1D2191'
+              />
+            )}
           </div>
         </form>
       </div>
