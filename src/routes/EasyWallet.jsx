@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Router } from '@reach/router'
 
 // Import pages
-import Home = React.lazy(() => import('../pages/Home/Home'))
+const Home = React.lazy(() => import('../pages/Home/Home'))
 
 
 const EasyWallet = () => {
