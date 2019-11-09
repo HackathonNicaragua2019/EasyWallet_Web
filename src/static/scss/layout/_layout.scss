@@ -16,3 +16,24 @@
   justify-content: center;
   align-items: center;
 }
+
+.l-dashboard {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 4rem 4.5rem 1fr;
+  background: var(--color-paragraph);
+  height: 100vh;
+}
+
+.l-header {
+  background: #fff;
+  grid-column: 2 / -1;
+  grid-row: 2 / 3;
+}
+
+.l-nav {
+  background: #fff;
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  border-bottom: 2px solid #ccc;
+}

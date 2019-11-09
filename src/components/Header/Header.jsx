@@ -13,7 +13,11 @@ const Header = props => {
         </div>
 
         <div className='header-right'>
-          <Dropdown />
+          <Dropdown
+            size={30}
+            color='#fff'
+            user='Idsarth19'
+          />
         </div>
       </div>
     </div>
