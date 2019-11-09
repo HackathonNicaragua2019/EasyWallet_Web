@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { Router, Redirect } from '@reach/router'
+import { Router } from '@reach/router'
 
 // Import pages
 import SignIn from '../pages/SignIn/SignInPage'
@@ -13,7 +13,6 @@ const EasyWallet = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Router>
-        <Redirect from='/' to='signin' />
         <Home path='/' />
         <SignIn path='signin' />
         <Dashboard path='dashboard'>

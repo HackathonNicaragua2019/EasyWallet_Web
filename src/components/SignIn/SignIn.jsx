@@ -26,30 +26,6 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
-
-    // const config = {
-    //   headers: {
-    //     'Access-Control-Allow-Origin': '*',
-    //     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
-    //   }
-    // }
-
-    // axios.post(`${apiUrl}/auth/login`, { email: userInput.email, password: userInput.password }, config)
-    //   .then(response => {
-    //     console.log(response)
-    //   })
-    
-    // console.log(result)
-    // setIsLoading(false)
-    // setData(result)
-    // dispatch({
-    //   type: USERDATA,
-    //   payload: {
-
-    //   }
-    // })
-    // localStorage.setItem('easy-token', result)
-    // props.history.push('/dashboard')
   }
 
   return (
