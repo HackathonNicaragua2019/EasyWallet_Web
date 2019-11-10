@@ -42,6 +42,7 @@ const SignIn = props => {
           message: 'El usuario o contraseña es incorrecto.'
         }
       })
+      return
     }
 
     const payload = {
