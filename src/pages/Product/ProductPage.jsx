@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from 'antd'
 import { useSelector, useDispatch } from 'react-redux'
+import 'antd/dist/antd.css'
 
 // Import components
 import AddProdcut from '../../components/Product/AddProduct'
@@ -13,21 +14,22 @@ import { PRODUCTS } from '../../store/actionTypes'
 
 const columns = [
   {
-    title: '',
+    title: 'Nombre',
     dataIndex: 'name'
   },
   {
-    title: 'Age',
-    dataIndex: 'age'
+    title: 'Descriptcion',
+    dataIndex: 'description'
   },
   {
-    title: 'Address',
-    dataIndex: 'address'
+    title: 'Expiracion',
+    dataIndex: 'expiration'
   }
 ]
 
 const ProductPage = props => {
   const dispatch = useDispatch()
+  const [data, setData] = useState('')
   const [isLoading, setIsLading] = useState(false)
   const { userName, userToken } = useSelector(state => state.user)
   const { message } = useSelector(state => state.product)
@@ -44,7 +46,16 @@ const ProductPage = props => {
         }
       })
       const result = await response.json()
-      console.log(result)
+      const finalArray = []
+      result.map(item => (
+        finalArray.push({
+          name: item.name,
+          description: item.description,
+          expiration: !item.expiration_date ? 'NINGUNA' : item.expiration_date
+        })
+      ))
+      setData(finalArray)
+      setIsLading(false)
     }
     fetchData()
   }, [])
@@ -68,9 +79,11 @@ const ProductPage = props => {
         </div>
       )}
       <AddProdcut />
-      <div className='product-table'>
-        
-      </div>
+      {!isLoading && (
+        <div className='product-table'>
+          <Table columns={columns} dataSource={data} />
+        </div>
+      )}
     </div>
   )
 }
