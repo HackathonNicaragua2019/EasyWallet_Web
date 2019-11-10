@@ -13,7 +13,6 @@ const Vision = React.lazy(() => import('../pages/Home/Vision'))
 const Valores = React.lazy(() => import('../pages/Home/Valores'))
 
 const EasyWallet = () => {
-
   return (
     <Suspense fallback={<Loading />}>
       <Router>
