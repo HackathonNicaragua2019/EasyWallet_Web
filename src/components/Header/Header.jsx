@@ -9,7 +9,7 @@ import { DROPDOWN } from '../../store/actionTypes'
 
 const Header = props => {
   const { active } = useSelector(state => state.dropdown)
-  const { username } = useSelector(state => state.user)
+  const { userName } = useSelector(state => state.user)
   const dispatch = useDispatch()
 
   const handleActive = () => {
@@ -33,7 +33,7 @@ const Header = props => {
           <Dropdown
             size={30}
             color='#fff'
-            user={username}
+            user={userName}
             onClick={handleActive}
           />
 

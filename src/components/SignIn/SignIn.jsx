@@ -1,9 +1,9 @@
 import React, { useState, useReducer } from 'react'
-import { Redirect } from '@reach/router'
+import { navigate } from '@reach/router'
 import { useDispatch } from 'react-redux'
 
 // Import actions types
-import { USERDATA } from '../../store/actionTypes'
+import { USERDATA, ERRORSIGNIN } from '../../store/actionTypes'
 
 // Import utils
 import { apiUrl } from '../../utils/api'
@@ -16,7 +16,6 @@ const SignIn = props => {
   const dispatch = useDispatch()
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
   const [isLoading, setIsLoading] = useState(false)
-  const [data, setData] = useState(null)
 
   const handleOnChange = event => {
     setUserInput({ [event.target.name]: event.target.value })
@@ -25,15 +24,40 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
-    fetch(`http://127.0.0.1:3333/auth/login`, {
+
+    const response = await fetch(`${apiUrl}/auth/login`, {
       method: 'POST',
-      body: JSON.stringify({ email: userInput.email, password: userInput.password })
+      headers: {
+        'Content-type': 'application/json'
+      },
+      body: JSON.stringify({ password: userInput.password, email: userInput.email })
     })
-      .then(response => {
-        console.log(response)
+    const result = await response.json()
+    setIsLoading(false)
+
+    if (result.message === 'You first need to register!') {
+      dispatch({
+        type: ERRORSIGNIN,
+        payload: {
+          message: 'El usuario o contraseña es incorrecto.'
+        }
       })
-    console.log({ email: userInput, password: userInput.password })
-    return <Redirect to='dashboard' />
+    }
+
+    const payload = {
+      auth: true,
+      userId: result.user.id,
+      userName: result.user.username,
+      email: result.user.email,
+      userToken: result.access_token.token
+    }
+    dispatch({
+      type: USERDATA,
+      payload
+    })
+
+    localStorage.setItem('easy_wallet', payload)
+    navigate('/dashboard')
   }
 
   return (
