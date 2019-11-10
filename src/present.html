@@ -15,138 +15,167 @@
   <meta charset="UTF-8">
   <!-- Site Title -->
   <title>Easy Wallet</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-    <!--
-    CSS
-    ============================================= -->
-    <link rel="stylesheet" href="../css/linearicons.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="stylesheet" href="../css/magnific-popup.css">
-    <link rel="stylesheet" href="../css/nice-select.css">					
-    <link rel="stylesheet" href="../css/animate.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.css">
-    <link rel="stylesheet" href="../css/main.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      height: 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+      position: relative;
+      z-index: 20;
+      background: #1f3a7a;
+    }
+    .header-title {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .seccion {
+      height: 700px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: url('./images/fondo.jpeg');
+    }
+    .seccion::before {
+      content: "";
+      background: rgba(0,0,0,.3);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .seccion-title {
+      font-size: 3rem;
+      padding: 0;
+      margin: 0;
+      color: #ffffff;
+      z-index: 10;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .seccion-description {
+      font-size: 2rem;
+      padding: 0;
+      margin-top: 5px;
+      color: #ffffff;
+      z-index: 10;
+      font-family: 'Roboto', sans-serif;
+    }
+    .service {
+      text-align: center;
+      font-size: 3rem;
+      font-family: 'Roboto', sans-serif;
+    }
+    .grid {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    .grid-title {
+      font-size: 1.5rem;
+      color: #1f3a7a;
+      text-decoration: none;
+      margin: 0;
+      padding: 0;
+      cursor: default;
+      font-family: 'Roboto', sans-serif;
+    }
+    .container {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    h4 {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .grid-descripcion {
+      color: #1f3a7a;
+      font-size: 1.1rem;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      background: #1f3a7a;
+      height: 50px;
+    }
+  </style>
   </head>
   <body>
-
-      <header id="header" id="home">
-        <div class="container">
-          <div class="row align-items-center justify-content-between d-flex">
-            <div id="logo">
-              <a href="/"><img src="./assets/static/images/logo.svg" alt="" title="" /></a>
-            </div>
-            <nav id="nav-menu-container">
-              <ul class="nav-menu">
-                <li><a href="signin.html">Ingresar</a></li>				    
-              </ul>
-            </nav><!-- #nav-menu-container -->		    		
-          </div>
-        </div>
-      </header><!-- #header -->
-
-
-    <!-- start banner Area -->
-    <section class="banner-area" id="home">	
-      <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-center">
-          <div class="banner-content col-lg-7">
-            <h1>
-              Todo lo que siempre quisiste
-            </h1>
-            <p class="pt-20 pb-20">
-              El sistema de inventario perfecto para el emprendedor, pequeña o mediana empresa
-            </p>
-          </div>											
-        </div>
+    <header class="header">
+      <div class="logo" id="logo">
+          <a href="/"><img src="./assets/static/images/logo.svg" alt="" title="" /></a>
       </div>
+      <a class="header-title" href="signin.html">Ingresar</a>
+    </header>
+
+    <section class="seccion">
+        <h1 class="seccion-title">
+          Todo lo que siempre quisiste
+        </h1>
+        <p class="seccion-description">
+          El sistema de inventario perfecto para el emprendedor, pequeña o mediana empresa
+        </p>
     </section>
     <!-- End banner Area -->	
 
-    <!-- Start we-offer Area -->
-    <section class="we-offer-area section-gap" id="offer">
-      <div class="container">
-        <div class="row d-flex justify-content-center">
-          <div class="menu-content pb-60 col-lg-10">
-            <div class="title text-center">
-              <h1 class="mb-10">Nuestros servicios</h1>
-            </div>
-          </div>
-        </div>						
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="single-offer d-flex flex-row pb-30">
-              <div class="icon">
-                <img src="../img/s1.png" alt="">
-              </div>
-              <div class="desc">
-                <a href="#"><h4>Asistente estadistico</h4></a>
-                <p>
-                  Te brindamos graficos estadisticos para ayudarte a mejorar tus ventas.
-                </p>
-              </div>
-            </div>
-            <div class="single-offer d-flex flex-row pb-30">
-              <div class="icon">
-                <img src="img/s3.png" alt="">
-              </div>
-              <div class="desc">
-                <a href="#"><h4>Control de inventario</h4></a>
-                <p>
-                  Control de mercancia, ventas, proveedores, facturacion; todo a tan solo un click.		
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="single-offer d-flex flex-row pb-30">
-              <div class="icon">
-                <img src="img/s2.png" alt="">
-              </div>
-              <div class="desc">
-                <a href="#"><h4>Sistema de pedidos</h4></a>
-                <p>
-                  Agranda tu clientela, nosotros hacemos llegar tus productos a tu segmento ideal mediante nuestro eccommerce
-                </p>
-              </div>
-            </div>
-            <div class="single-offer d-flex flex-row pb-30">
-              <div class="icon">
-                <img src="img/s4.png" alt="">
-              </div>
-              <div class="desc">
-                <a href="#"><h4>Todo en tu disposito movil</h4></a>
-                <p>
-                  No te pierdas lo que sucede en tu negocio, con nuestra aplicacion movil estaras siempre al tanto.
-                </p>
-              </div>
-            </div>
-          </div>												
-        </div>
-      </div>	
+    <section class="service">
+      <h1 class="service-title">Nuestros servicios</h1>
     </section>
-    <!-- End we-offer Area -->
-    
 
-    <!-- Start home-video Area -->
-    <!-- End footer Area -->		
+    <div class="grid">
+      <div class="container">
+        <a href="#" class="grid-title"><h4>Asistente estadistico</h4></a>
+        <p class="grid-descripcion">
+          Te brindamos graficos estadisticos para ayudarte a mejorar tus ventas.
+        </p>
+      </div>
 
-    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="../js/vendor/bootstrap.min.js"></script>			
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-      <script src="../js/easing.min.js"></script>			
-    <script src="../js/hoverIntent.js"></script>
-    <script src="../js/superfish.min.js"></script>	
-    <script src="../js/jquery.ajaxchimp.min.js"></script>
-    <script src="../js/jquery.magnific-popup.min.js"></script>	
-    <script src="../js/owl.carousel.min.js"></script>			
-    <script src="../js/jquery.sticky.js"></script>
-    <script src="../js/jquery.nice-select.min.js"></script>			
-    <script src="../js/parallax.min.js"></script>		
-    <script src="../js/mail-script.js"></script>	
-    <script src="../js/main.js"></script>	
+      <div class="container">
+        <a href="#" class="grid-title"><h4>Control de inventario</h4></a>
+        <p class="grid-descripcion">
+          Control de mercancia, ventas, proveedores, facturacion; todo a tan solo un click.		
+        </p>
+      </div>
+
+      <div class="container">
+        <a href="#" class="grid-title"><h4>Sistema de pedidos</h4></a>
+        <p class="grid-descripcion">
+          Agranda tu clientela, nosotros hacemos llegar tus productos a tu segmento ideal mediante nuestro eccommerce
+        </p>
+      </div>
+
+      <div class="container">
+        <a href="#" class="grid-title"><h4>Todo en tu disposito movil</h4></a>
+        <p class="grid-descripcion">
+          No te pierdas lo que sucede en tu negocio, con nuestra aplicacion movil estaras siempre al tanto.
+        </p>
+      </div>
+    </div>
+
+    <footer class="footer"></footer>
+
   </body>
 </html>
 
