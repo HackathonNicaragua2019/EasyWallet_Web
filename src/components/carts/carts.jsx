@@ -16,7 +16,7 @@ const carts = () => {
         </div>
         </Link>
 
-        <Link to="/Vision">
+        <Link to="/vision">
         <div className="Carts">
           <p className="p">Visión</p>
           <img src={Vision} className="Home" alt="" />
