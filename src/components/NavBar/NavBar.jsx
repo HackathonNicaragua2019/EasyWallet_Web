@@ -1,6 +1,7 @@
 import React from "react";
-
+import { Link } from "@reach/router";
 import logo from "../../static/images/logo.svg";
+
 
 const NavBar = () => {
   return (
@@ -12,10 +13,11 @@ const NavBar = () => {
   
 
       <div className="accesos">
-        <p className="acceso">EasyWallet</p>
-        <p className="acceso">Mision</p>
-        <p className="acceso">Vision</p>
-        <p className="acceso">valores</p>
+        <Link to="/signin">
+        <p className="acceso">Ingresar</p>
+        </Link>
+        
+       
       </div>
     </div>
   );

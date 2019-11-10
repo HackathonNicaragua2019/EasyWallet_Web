@@ -21,15 +21,15 @@ const HomePage = () => {
         <img src={store} className="img" alt="" />
 
         <div className="checkList">
-          <div className="item">
+          <div className="items">
           <img src={check} alt="" /> 
           <p className="ck">Encuentra clientes potenciales a los que apuntar para que puedas aumentar las ventas</p>
           </div>
-          <div className="item">
+          <div className="items">
           <img src={check} alt="" />
           <p className="ck">Automatiza todos tus procesos </p>
           </div>
-          <div className="item">
+          <div className="items">
           <img src={check} alt="" />
           <p className="ck">Alcance su máximo potencial para competir efectivamente con empresas líderes</p>
           </div>
