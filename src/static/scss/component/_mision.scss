@@ -9,8 +9,22 @@ bottom: 600px;
 .contenedor_info{
     display: grid;
     grid-template-columns: repeat(2, 50%) ;
+    position: absolute;;
+top: 200px;
 }
 .Empresaria{
-width: 200px;
-height: 200px;
+width: 500px;
+height: 450px;
+display: block;
+margin: auto;
+}
+.logg{
+display: block;
+margin: auto;
+margin-top: 20px;
+}
+.brindar{
+    font-family: var(--body-font);
+    font-size: 25px;
+    text-align: center;
 }
