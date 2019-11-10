@@ -4,11 +4,13 @@ import { combineReducers } from 'redux'
 import { user } from './user'
 import { dropdown } from './dropdown'
 import { product } from './product'
+import { business } from './business'
 
 const reducers = combineReducers({
   user,
   dropdown,
-  product
+  product,
+  business
 })
 
 export default reducers

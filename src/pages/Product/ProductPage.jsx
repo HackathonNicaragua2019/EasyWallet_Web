@@ -49,11 +49,13 @@ const ProductPage = props => {
       const finalArray = []
       result.map(item => (
         finalArray.push({
+          key: item.id.toString(),
           name: item.name,
           description: item.description,
           expiration: !item.expiration_date ? 'NINGUNA' : item.expiration_date
         })
       ))
+      console.log(finalArray)
       setData(finalArray)
       setIsLading(false)
     }
@@ -73,15 +75,15 @@ const ProductPage = props => {
     <div className='l-global'>
       <p className='global-title'>Agregar producto</p>
       {message && (
-        <div className='product-container-sucess'>
-          <p className='signin-message-error'>{message}</p>
-          <p className='signin-close' onClick={handleOnClose}>X</p>
+        <div className='global-container'>
+          <p className='global-message'>{message}</p>
+          <p className='global-close' onClick={handleOnClose}>X</p>
         </div>
       )}
       <AddProdcut />
       {!isLoading && (
         <div className='product-table'>
-          <Table columns={columns} dataSource={data} />
+          <Table columns={columns} dataSource={data} rowKey={record => record.id} />
         </div>
       )}
     </div>
