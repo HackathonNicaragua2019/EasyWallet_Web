@@ -7,17 +7,17 @@ const items = [
   {
     key: 1,
     title: 'Productos mas vendidos',
-    description: ''
+    description: 'Samsung S9'
   },
   {
     key: 2,
     title: 'Total de pedidos',
-    description: ''
+    description: '120'
   },
   {
     key: 3,
     title: 'Total de ganancias',
-    description: ''
+    description: 'C$ 1,3000.00'
   }
 ]
 
