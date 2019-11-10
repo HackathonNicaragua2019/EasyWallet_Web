@@ -6,24 +6,24 @@ import Container from '../components/Container/Container'
 const items = [
   {
     key: 1,
-    title: '',
+    title: 'Productos mas vendidos',
     description: ''
   },
   {
     key: 2,
-    title: '',
+    title: 'Total de pedidos',
     description: ''
   },
   {
     key: 3,
-    title: '',
+    title: 'Total de ganancias',
     description: ''
   }
 ]
 
 const ListOfItems = props => {
   return (
-    <div className='l-items'>
+    <>
       {items.map(item => (
         <Container
           key={item.key}
@@ -31,7 +31,7 @@ const ListOfItems = props => {
           description={item.description}
         />
       ))}
-    </div>
+    </>
   )
 }
 

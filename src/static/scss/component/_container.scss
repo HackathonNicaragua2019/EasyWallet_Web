@@ -1,6 +1,11 @@
 .container {
+  background: var(--color-main);
+  padding: 30px 40px;
+  border-radius: 20px;
+  height: 100%;
   &-title {
     color: var(--color-paragraph);
+    font-weight: normal;
   }
 
   &-description {
