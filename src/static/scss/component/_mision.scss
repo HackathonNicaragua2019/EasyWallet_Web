@@ -1,5 +1,16 @@
-.fondo1 {
-    width: 100%;
-    opacity: 0.6;
-    position: absolute;
-  }
+.Mision{
+font-family: var(--body-font);
+font-size: 25px;
+text-align: center;
+position:relative;
+bottom: 600px;
+}
+
+.contenedor_info{
+    display: grid;
+    grid-template-columns: repeat(2, 50%) ;
+}
+.Empresaria{
+width: 200px;
+height: 200px;
+}
