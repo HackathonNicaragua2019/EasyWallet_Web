@@ -17,12 +17,8 @@ const EasyWallet = () => {
   return (
     <Suspense fallback={<Loading />}>
       <Router>
-<<<<<<< HEAD
-
-
         {/* <Redirect from='/' to='signin' /> */}
-=======
->>>>>>> d35e14e00481beea1234895e6537a689afd19007
+
         <Home path='/' />
         <SignIn path='signin' />
         <Mision path='/mision' />
