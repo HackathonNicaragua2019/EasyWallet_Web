@@ -15,11 +15,11 @@ const AddProduct = props => {
   const { userName, userToken } = useSelector(state => state.user)
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { name: '', description: '' })
   const [isLoading, setIsLading] = useState(false)
-  
+
   const handleOnChange = event => {
     setUserInput({ [event.target.name]: event.target.value })
   }
-  
+
   const handleOnSubmit = async event => {
     event.preventDefault()
     setIsLading(true)
@@ -33,7 +33,7 @@ const AddProduct = props => {
       body: JSON.stringify({ name: userInput.name, description: userInput.description, expiration_date: userInput.expiration_date })
     })
     const result = await response.json()
-    console.log(result)
+
     if (result.created_at !== null) {
       dispatch({
         type: BUSINESS,
