@@ -7,6 +7,7 @@ import Loading from '../pages/Loading/LoadingPage'
 import Profile from '../pages/Profile/ProfilePage'
 import DashboardHome from '../components/Dashboard/DashboardHome'
 import Product from '../pages/Product/ProductPage'
+import Business from '../pages/Business/BusinessPage'
 const Home = React.lazy(() => import('../pages/Home/HomePage'))
 const Dashboard = React.lazy(() => import('../pages/Dashboard/DashboardPage'))
 const Mision = React.lazy(() => import('../pages/Home/Mision'))
@@ -31,6 +32,7 @@ const EasyWallet = () => {
           <DashboardHome path='/' />
           <Profile path='profile' />
           <Product path='product' />
+          <Business path='business' />
         </Dashboard>
 
       </Router>
