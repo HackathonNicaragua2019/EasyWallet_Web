@@ -17,7 +17,7 @@ const items = [
   {
     key: 3,
     title: 'Total de ganancias',
-    description: 'C$ 1,3000.00'
+    description: 'C$ 1,300.00'
   }
 ]
 
