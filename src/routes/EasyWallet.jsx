@@ -21,7 +21,6 @@ const EasyWallet = () => {
         {/* <Redirect from='/' to='signin' /> */}
         <Home path='/' />
         <SignIn path='signin' />
-        <Dashboard path='/dashboard' />
         <Mision path='/mision' />
         <Vision path='/vision' />
         <Valores path='/valores' />
