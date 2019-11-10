@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useEffect } from 'react'
 import { Router } from '@reach/router'
 
 // Import pages
@@ -13,12 +13,16 @@ const Vision = React.lazy(() => import('../pages/Home/Vision'))
 const Valores = React.lazy(() => import('../pages/Home/Valores'))
 
 const EasyWallet = () => {
+
   return (
     <Suspense fallback={<Loading />}>
       <Router>
+<<<<<<< HEAD
 
 
         {/* <Redirect from='/' to='signin' /> */}
+=======
+>>>>>>> d35e14e00481beea1234895e6537a689afd19007
         <Home path='/' />
         <SignIn path='signin' />
         <Mision path='/mision' />

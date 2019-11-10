@@ -57,7 +57,7 @@ const SignIn = props => {
       payload
     })
 
-    localStorage.setItem('easy_wallet', payload)
+    localStorage.setItem('easy_wallet', result.access_token.token)
     navigate('/dashboard')
   }
 

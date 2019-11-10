@@ -2,10 +2,10 @@ import { REMOVEDATA, USERDATA, ERRORSIGNIN } from '../actionTypes'
 
 const INITIAL_STATE = {
   auth: false,
-  userToken: null,
-  userId: null,
-  userName: null,
-  email: null
+  userToken: '',
+  userId: '',
+  userName: '',
+  email: ''
 }
 
 export const user = (state = INITIAL_STATE, action) => {
@@ -17,7 +17,7 @@ export const user = (state = INITIAL_STATE, action) => {
       return { ...action.payload }
     }
     case REMOVEDATA: {
-      return null
+      return INITIAL_STATE
     }
 
     default:

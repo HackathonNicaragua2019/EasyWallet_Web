@@ -35,10 +35,18 @@
   background: #fff;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .l-content {
   grid-column: 2 / -1;
   grid-row: 3 / -1;
+}
+
+.l-container {
+  padding: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10rem;
+  grid-column-gap: 5rem;
 }

@@ -9,4 +9,9 @@ const Container = props => {
   )
 }
 
+Container.defaultProps = {
+  title: 'undefined',
+  description: 'undefined'
+}
+
 export default Container

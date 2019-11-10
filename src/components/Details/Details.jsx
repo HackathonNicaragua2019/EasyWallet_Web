@@ -13,13 +13,12 @@ const Details = props => {
       type: REMOVEDATA
     })
     localStorage.removeItem('easy_wallet')
-    navigate('signin')
   }
 
   return (
     <div className='details'>
       <Link className='details-title' to='profile'>Perfil</Link>
-      <Link onClick={handleOnSignout} className='details-title' to='signout'>Cerrar sesion</Link>
+      <Link onClick={handleOnSignout} className='details-title' to='/signin'>Cerrar sesion</Link>
     </div>
   )
 }
