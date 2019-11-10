@@ -1,0 +1,10 @@
+.product {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-form {
+    width: 500px;
+  }
+}

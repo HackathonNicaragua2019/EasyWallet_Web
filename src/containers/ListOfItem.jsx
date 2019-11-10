@@ -10,6 +10,11 @@ const items = [
     routeName: '/dashboard'
   },
   {
+    key: 10,
+    name: 'Productos',
+    routeName: 'product'
+  },
+  {
     key: 2,
     name: 'Inventario',
     routeName: 'inventory'
