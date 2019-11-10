@@ -1,1 +1,1 @@
-export const api = ``
+export const apiUrl = 'https://sistienda.herokuapp.com'

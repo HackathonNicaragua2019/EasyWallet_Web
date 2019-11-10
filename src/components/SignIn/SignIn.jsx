@@ -1,11 +1,19 @@
 import React, { useState, useReducer } from 'react'
 import { Redirect } from '@reach/router'
+import { useDispatch } from 'react-redux'
+
+// Import actions types
+import { USERDATA } from '../../store/actionTypes'
+
+// Import utils
+import { apiUrl } from '../../utils/api'
 
 // Import components
 import IconButton from '../Button/IconButton'
 import Loader from '../Loader/Loader'
 
 const SignIn = props => {
+  const dispatch = useDispatch()
   const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
   const [isLoading, setIsLoading] = useState(false)
   const [data, setData] = useState(null)
@@ -17,15 +25,15 @@ const SignIn = props => {
   const handleOnSubmit = async event => {
     setIsLoading(true)
     event.preventDefault()
-    setData('hola')
-    // const respone = await fetch()
-    // const result = await respone.json()
-
-    // console.log(result)
-  }
-
-  if (data !== null) {
-    return <Redirect to='/dashboard' />
+    fetch(`http://127.0.0.1:3333/auth/login`, {
+      method: 'POST',
+      body: JSON.stringify({ email: userInput.email, password: userInput.password })
+    })
+      .then(response => {
+        console.log(response)
+      })
+    console.log({ email: userInput, password: userInput.password })
+    return <Redirect to='dashboard' />
   }
 
   return (

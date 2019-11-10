@@ -37,3 +37,8 @@
   grid-row: 1 / 2;
   border-bottom: 2px solid #ccc;
 }
+
+.l-content {
+  grid-column: 2 / -1;
+  grid-row: 3 / -1;
+}

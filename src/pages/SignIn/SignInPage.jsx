@@ -4,9 +4,12 @@ import React from 'react'
 import SignIn from '../../components/SignIn/SignIn'
 
 const SignInPage = props => {
+  console.log(props.history)
   return (
     <div className='l-signin'>
-      <SignIn />
+      <SignIn
+        history={props.history}
+      />
     </div>
   )
 }

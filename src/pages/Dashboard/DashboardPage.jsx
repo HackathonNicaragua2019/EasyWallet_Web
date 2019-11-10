@@ -1,16 +1,21 @@
 import React from 'react'
 
 // Import components
-import Header from '../../components/Header/Header'
 import Nav from '../../components/NavBar/Nav'
 import Sidebar from '../../components/Sidebar/Sidebar'
+import Header from '../../components/Header/Header'
 
 const DashboardPage = props => {
   return (
-    <div className='l-dashboard'>
-      <Nav />
-      <Header />
-      <Sidebar />
+    <div>
+      <div className='l-dashboard'>
+        <Nav />
+        <Sidebar />
+        <Header />
+        <div className='l-content'>
+          {props.children}
+        </div>
+      </div>
     </div>
   )
 }
