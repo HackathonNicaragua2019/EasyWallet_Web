@@ -14,7 +14,7 @@ import Loader from '../Loader/Loader'
 
 const SignIn = props => {
   const dispatch = useDispatch()
-  const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: '', password: '' })
+  const [userInput, setUserInput] = useReducer((state, newState) => ({ ...state, ...newState }), { email: 'dev@dev.com', password: '1234567' })
   const [isLoading, setIsLoading] = useState(false)
 
   const handleOnChange = event => {
